@@ -1,4 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Updated workflow to force redeployment
 name: Deploy static content to Pages
 
 on:
@@ -47,9 +47,8 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v1
         with:
-          # Upload dist repository
           path: './dist'
 
       - name: Deploy to GitHub Pages
